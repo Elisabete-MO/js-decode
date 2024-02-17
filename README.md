@@ -1,7 +1,11 @@
-# 🗃️ Boas-vindas ao repositório do projeto Meu Portfólio! 🌟
+# 🗃️ Boas-vindas ao repositório do projeto Decode! 🌟
 
 
-<h3 align="center" style="font-weight: 900; font-family: Arial, sans-serif;"> Coleção de exemplos de trabalhos realizados</h3>
+<h3 align="center" style="font-weight: 900; font-family: Arial, sans-serif;"> Descubra qual é a mensagem secreta!: </h3>
+
+<p align="center">
+"pairaibenterns poberr enterncairair enterssenter dentersaifimesober enter tenterr fimesnailimeszaidober enterlenter coberm sufatcenterssober!" </p>
+
 <p align="center">
      <a alt="JavaScript" href="https://www.javascript.com/" target="_blank">
         <img src="https://img.shields.io/badge/JavaScript-F0DB4F?style=for-the-badge&logo=javascript&logoColor=323330" />
@@ -16,19 +20,31 @@
 
 <h3>🧑‍💻 Descrição do Projeto</h3>
 
-Este é o meu portfólio online, onde exibo uma seleção dos meus projetos e trabalhos realizados de uma forma mais visual e menos técnica do que a apresentada no Github. Aqui você encontrará uma variedade de projetos, desde aplicações web e móveis, front-end, back-end e full-stack.
+Essa aplicação que criptografa textos, assim será possível trocar mensagens secretas com outras pessoas que saibam o segredo da criptografia utilizada.
 
-Cada projeto listado foi cuidadosamente selecionado para demonstrar minhas habilidades, experiência e estilo. Estou constantemente atualizando e adicionando novos projetos conforme eu os concluo.
+As "chaves" de criptografia que serão utilizadas são:
+A letra "e" é convertida para "enter"
+A letra "i" é convertida para "imes"
+A letra "a" é convertida para "ai"
+A letra "o" é convertida para "ober"
+A letra "u" é convertida para "ufat"
 
-Este portfólio é uma representação fiel do meu trabalho e estou sempre aberto a feedback, colaborações e oportunidades de trabalho. Fique à vontade para explorar os projetos e entrar em contato comigo se tiver alguma dúvida ou interesse em colaborar!
+<h3>💻 Requisitos</h3>
 
-<h3>💻 Recursos</h3>
+- Deve funcionar apenas com letras minúsculas
+- Não devem ser utilizados letras com acentos nem caracteres especiais
+- Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original. 
 
-- Apresentação pessoal.
-- Formação acadêmica e experiência profissional.
-- Exibição de projetos de desenvolvimento de software.
-- Links para os repositórios do GitHub e outros recursos relevantes.      
+> Por exemplo:
+> "gato" => "gaitober"
+> gaitober" => "gato"
+
+- A página deve ter campos para inserção do texto a ser criptografado ou descriptografado, e a pessoa usuária deve poder escolher entre as duas opções
+- O resultado deve ser exibido na tela.
+
+<h3>Extras:</h3>
+- Um botão que copie o texto criptografado/descriptografado para a área de transferência - ou seja, que tenha a mesma funcionalidade do ctrl+C ou da opção "copiar" do menu dos aplicativos.     
 
 <h3> :pencil: Orientações </h3>
 
-<p> :heavy_check_mark: Esse projeto está disponível em <code>https://elisabete-mo.github.io/</code> </p>
+<p> :heavy_check_mark: Esse projeto está disponível em :construction: </p>
