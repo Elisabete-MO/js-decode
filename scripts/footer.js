@@ -1,4 +1,5 @@
 const footerContent = `
+    <p>2023</p>
     <p>Created by Elisabete Oliveira</p>
     <p><a href="https://www.flaticon.com/free-icons/alert" title="alert icons">Alert icons created by Cap Cool - Flaticon</a></p>
     `;

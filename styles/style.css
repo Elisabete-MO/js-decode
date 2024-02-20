@@ -92,10 +92,26 @@ main {
     margin: 1rem;
 }
 
+@keyframes destaque {
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+.alert {
+    animation: destaque 1s infinite; /* Destaque infinito */
+}
+
 .copy__content {
     background-color: white;
     width: 30%;
-}
+    }
 
 .copy__content h3, .copy__content p, .copy__content__text {
     text-align: center;
@@ -124,6 +140,7 @@ main {
     height: 70%;
 }
 
+/* buttons */
 .button__container {
     display: flex;
     justify-content: space-evenly;
