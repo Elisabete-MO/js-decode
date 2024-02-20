@@ -1,19 +1,32 @@
 const copyMessage = document.getElementsByClassName('copy__content__message')[0];
-const copyText = document.getElementsByClassName('copy__content__text')[0];
+const copyContainer = document.getElementsByClassName('copy__content__text')[0];
 const textRea1 = document.getElementsByClassName('input__text')[0];
 const errorMensage = document.getElementsByClassName('input__content__message')[0];
-const contentDisplay = document.getElementsByClassName('copy__text')[0];
+const copyText = document.getElementsByClassName('copy__text')[0];
 const cripto = document.getElementsByClassName('cripto')[0];
 const descripto = document.getElementsByClassName('descripto')[0];
 
-// esconde a div do copyMessage e apresenta a div do copyText e copia o conteudo do textarea input para o textarea copyText
+// função para criptografar o texto
+function criptografar(text) {
+  text = text.replace(/e/g, 'enter');
+  text = text.replace(/i/g, 'imes');
+  text = text.replace(/a/g, 'ai');
+  text = text.replace(/o/g, 'ober');
+  text = text.replace(/u/g, 'ufat');
+  return text;
+}
+
+// esconde a div do copyMessage e apresenta a div do copyText e copia o conteudo do textarea input para o textarea copyText e criptografa o texto
 cripto.addEventListener('click', () => {
-  copyMessage.setAttribute('hidden', true);
-  copyText.removeAttribute('hidden');
-  if (textRea1.value !== '') {
-    contentDisplay.value = textRea1.value;
-  }
-  textRea1.value = '';
+  if (cripto.classList.contains('enabled')) {
+    copyMessage.setAttribute('hidden', true);
+    copyContainer.removeAttribute('hidden');
+    if (textRea1.value !== '') {
+      const text = textRea1.value;
+      const criptoText = criptografar(text);
+      copyText.value = criptoText;
+    }
+  }   
 });
 
 // habilita os botoes assim que o usuario digitar um caracter minusculo
@@ -35,30 +48,3 @@ textRea1.addEventListener('input', function(event) {
     errorMensage.classList.remove('alert');
   };
 });
-
-
-// cripto.addEventListener('click', () => {
-//     var text = cripto.value;
-//     switch (text) {
-//         case 'cripto':
-//             cripto.value = 'descripto';
-//             break;
-//         case 'descripto':
-//             cripto.value = 'cripto';
-//             break;
-//     }
-// });
-
-
-
-// desabilitar o link
-
-// botoes.forEach(botao => {
-//   botao.addEventListener('click', function(event) {
-//       botoes.forEach(outroBotao => {
-//           outroBotao.classList.add('disabled');
-//       });
-      
-//       this.classList.remove('disabled');
-//   });
-// });
