@@ -1,6 +1,6 @@
 const footerContent = `
     <p>Created by Elisabete Oliveira</p>
-    <p><a target="_blank" href="https://icons8.com/icon/T12wf6pMSu6F/horda-de-world-of-warcraft">World of Warcraft Horde</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+    <p><a href="https://www.flaticon.com/free-icons/alert" title="alert icons">Alert icons created by Cap Cool - Flaticon</a></p>
     `;
 
   document.getElementById('footer__container').innerHTML = footerContent;
