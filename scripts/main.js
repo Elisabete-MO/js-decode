@@ -6,15 +6,52 @@ const copyText = document.getElementsByClassName('copy__text')[0];
 const cripto = document.getElementsByClassName('cripto')[0];
 const descripto = document.getElementsByClassName('descripto')[0];
 
+// função para copiar o texto
+// function copyTextToClipboard() {
+//   copyText.select();
+//   document.execCommand('copy');
+//   copyMessage.removeAttribute('hidden');
+//   copyContainer.setAttribute('hidden', true);
+//   setTimeout(() => {
+//     copyMessage.setAttribute('hidden', true);
+//   }, 2000);
+// }
+
+// função para abilitar os botões
+function enabledButtons() {
+  cripto.classList.remove('disabled');
+  cripto.classList.add('enabled');
+  descripto.classList.remove('disabled');
+  descripto.classList.add('enabled');
+}
+
+// função para desabilitar os botões
+function disabledButtons() {
+  cripto.classList.remove('enabled');
+  cripto.classList.add('disabled');
+  descripto.classList.remove('enabled');
+  descripto.classList.add('disabled');
+}
+
 // função para criptografar o texto
-function criptografar(text) {
+function crypt(text) {
+  text = text.replace(/a/g, 'ai');
   text = text.replace(/e/g, 'enter');
   text = text.replace(/i/g, 'imes');
-  text = text.replace(/a/g, 'ai');
   text = text.replace(/o/g, 'ober');
   text = text.replace(/u/g, 'ufat');
   return text;
 }
+
+// função para descriptografar o texto
+function decrypt(text) {
+  text = text.replace(/ai/g, 'a');
+  text = text.replace(/enter/g, 'e');
+  text = text.replace(/imes/g, 'i');
+  text = text.replace(/ober/g, 'o');
+  text = text.replace(/ufat/g, 'u');
+  return text;
+};
 
 // esconde a div do copyMessage e apresenta a div do copyText e copia o conteudo do textarea input para o textarea copyText e criptografa o texto
 cripto.addEventListener('click', () => {
@@ -23,8 +60,25 @@ cripto.addEventListener('click', () => {
     copyContainer.removeAttribute('hidden');
     if (textRea1.value !== '') {
       const text = textRea1.value;
-      const criptoText = criptografar(text);
+      const criptoText = crypt(text);
       copyText.value = criptoText;
+      textRea1.value = '';
+      disabledButtons();
+    }
+  }   
+});
+
+// esconde a div do copyMessage e apresenta a div do copyText e copia o conteudo do textarea input para o textarea copyText e descriptografa o texto
+descripto.addEventListener('click', () => {
+  if (descripto.classList.contains('enabled')) {
+    copyMessage.setAttribute('hidden', true);
+    copyContainer.removeAttribute('hidden');
+    if (textRea1.value !== '') {
+      const text = textRea1.value;
+      const descriptoText = decrypt(text);
+      copyText.value = descriptoText;
+      textRea1.value = '';
+      disabledButtons();
     }
   }   
 });
@@ -32,19 +86,13 @@ cripto.addEventListener('click', () => {
 // habilita os botoes assim que o usuario digitar um caracter minusculo
 textRea1.addEventListener('input', function(event) {
   const text = textRea1.value;
-  const regex = /^[a-z]*$/;
+  const regex = /^[a-z\s]*$/;
 
   if (text !== '' && !regex.test(text)) {
-    cripto.classList.remove('enabled');
-    cripto.classList.add('disabled');
-    descripto.classList.remove('enabled');
-    descripto.classList.add('disabled');
+    disabledButtons();
     errorMensage.classList.add('alert');
   } else {
-    cripto.classList.remove('disabled');
-    cripto.classList.add('enabled');
-    descripto.classList.remove('disabled');
-    descripto.classList.add('enabled');
+    enabledButtons();
     errorMensage.classList.remove('alert');
   };
 });
