@@ -211,7 +211,31 @@ main {
     border: 0.25rem outset var(--color-black);
 }
 
-@media (max-width: 600px) {
+@media (min-width: 375px) and (max-width: 769px) {
+    .content {
+        flex-direction: column;
+        height: 1174;
+        padding-top: 50rem;
+        justify-content: space-evenly;
+    }
+
+    .input__content {
+        height: 65%;
+        width: 90%;
+    }
+
+    .copy__content {
+        height: 30%;
+        margin-bottom: 1rem;
+        width: 85%;
+    }
+
+    .copy__content__text, .copy__div__flex {
+        height: 100%;
+    }
+}
+
+@media (max-width: 375px) {
     main {
         margin-top: 30rem;
     }

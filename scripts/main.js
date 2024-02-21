@@ -115,7 +115,6 @@ function updateClipboard(copyContent) {
 };
 
 copy.addEventListener('click', () => {
-  console.log('copy');
   updateClipboard(copyText.value);
   copyContainer.setAttribute('hidden', true);
   copyMessage.removeAttribute('hidden');
