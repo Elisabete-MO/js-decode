@@ -210,8 +210,8 @@ main {
 .copy:active {
     border: 0.25rem outset var(--color-black);
 }
-
-@media (min-width: 375px) and (max-width: 769px) {
+/* (min-width: 375px) and? */
+@media (max-width: 769px) {
     .content {
         flex-direction: column;
         height: 1174;
@@ -235,8 +235,9 @@ main {
     }
 }
 
-@media (max-width: 375px) {
-    main {
-        margin-top: 30rem;
+/* @media (max-width: 375px) {
+    .content {
+        padding-top: 30rem;
     }
-}
+
+} */
