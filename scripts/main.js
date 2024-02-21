@@ -25,13 +25,35 @@ function disabledButtons() {
 
 // função para criptografar o texto
 function crypt(text) {
-  text = text.replace(/a/g, 'ai');
-  text = text.replace(/e/g, 'enter');
-  text = text.replace(/i/g, 'imes');
-  text = text.replace(/o/g, 'ober');
-  text = text.replace(/u/g, 'ufat');
-  return text;
-};
+  const letters = text.split('');
+  const result = [];
+
+  for (let i = 0; i < letters.length; i++) {
+    let letter = letters[i];
+    switch (letter) {
+      case 'a':
+        letter = 'ai';
+        break;
+      case 'e':
+        letter = 'enter';
+        break;
+      case 'i':
+        letter = 'imes';
+        break;
+      case 'o':
+        letter = 'ober';
+        break;
+      case 'u':
+        letter = 'ufat';
+        break;
+      default:
+        break;
+    }
+    result.push(letter);
+  }
+
+  return result.join('');
+}
 
 // função para descriptografar o texto
 function decrypt(text) {
