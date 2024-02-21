@@ -5,17 +5,7 @@ const errorMensage = document.getElementsByClassName('input__content__message')[
 const copyText = document.getElementsByClassName('copy__text')[0];
 const cripto = document.getElementsByClassName('cripto')[0];
 const descripto = document.getElementsByClassName('descripto')[0];
-
-// função para copiar o texto
-// function copyTextToClipboard() {
-//   copyText.select();
-//   document.execCommand('copy');
-//   copyMessage.removeAttribute('hidden');
-//   copyContainer.setAttribute('hidden', true);
-//   setTimeout(() => {
-//     copyMessage.setAttribute('hidden', true);
-//   }, 2000);
-// }
+const copy = document.querySelector('.button.copy');
 
 // função para abilitar os botões
 function enabledButtons() {
@@ -23,7 +13,7 @@ function enabledButtons() {
   cripto.classList.add('enabled');
   descripto.classList.remove('disabled');
   descripto.classList.add('enabled');
-}
+};
 
 // função para desabilitar os botões
 function disabledButtons() {
@@ -31,7 +21,7 @@ function disabledButtons() {
   cripto.classList.add('disabled');
   descripto.classList.remove('enabled');
   descripto.classList.add('disabled');
-}
+};
 
 // função para criptografar o texto
 function crypt(text) {
@@ -41,7 +31,7 @@ function crypt(text) {
   text = text.replace(/o/g, 'ober');
   text = text.replace(/u/g, 'ufat');
   return text;
-}
+};
 
 // função para descriptografar o texto
 function decrypt(text) {
@@ -95,4 +85,17 @@ textRea1.addEventListener('input', function(event) {
     enabledButtons();
     errorMensage.classList.remove('alert');
   };
+});
+
+// função para copiar o texto
+function updateClipboard(copyContent) {
+  navigator.clipboard.writeText(copyContent);
+};
+
+copy.addEventListener('click', () => {
+  console.log('copy');
+  updateClipboard(copyText.value);
+  copyContainer.setAttribute('hidden', true);
+  copyMessage.removeAttribute('hidden');
+  disabledButtons();
 });
