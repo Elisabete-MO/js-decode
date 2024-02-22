@@ -47,4 +47,4 @@ A letra "u" é convertida para "ufat"
 
 <h3> :pencil: Orientações </h3>
 
-<p> :heavy_check_mark: Esse projeto está disponível em :construction: </p>
+<p> :heavy_check_mark: Esse projeto está disponível em <a alt="CSS" href="https://elisabete-mo.github.io/js-decode/" target="_blank">Decode</a> </p>
