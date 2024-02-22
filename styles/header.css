@@ -1,0 +1,20 @@
+/* header */
+.header {
+  align-items: left;
+  background: linear-gradient(0deg, var(--color-primary) 30%, var(--color-quaternary) 100%), url('../images/legende.gif');
+  border-radius: 0 0 20rem;
+  grid-area: header;
+  letter-spacing: 0.3rem; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header img {
+  border-bottom: 0.3rem solid var(--color-secondary);
+  border-right: 0.3rem solid var(--color-secondary);
+  margin: 1vh 10vw;
+  padding: 1vh 1vw;
+  text-align: center;
+}

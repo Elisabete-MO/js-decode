@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="shortcut icon" type="image/png" href="./images/decode.png"/>
+        <title>Decode</title>
+    </head>
+    <body>
+        <header class="header"></header>
+        <main class="content">
+            <section class="input__content">
+                <textarea class="input__text" placeholder="Digite o texto aqui"></textarea>
+                <div class="input__content__message">
+                    <img src="./images/exclamation.png" width="20rem">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="button__container">
+                    <a class="button cripto disabled">Criptografar</a>
+                    <a class="button descripto disabled">Descriptografar</a>
+                </div>  
+            </section>
+            <section class="copy__content">
+                <div class="copy__content__message">
+                    <h3>Nenhuma mensagem encontrada</h3>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <div class="copy__content__text" hidden="true">
+                    <div class="copy__div__flex">
+                        <textarea class="copy__text"></textarea>
+                        <a class="button copy">Copiar</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer__container"></footer>
+    </body>
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/footer.js"></script>
+</html>

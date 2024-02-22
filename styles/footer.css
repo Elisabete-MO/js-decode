@@ -1,0 +1,29 @@
+/* footer */
+footer {
+  background: linear-gradient(0deg, var(--color-quinary) 30%, var(--color-primary) 100%), url('../images/legende.gif');
+  border-radius: 0 20rem 0 0;
+  color: var(--color-back);
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: 800; 
+  grid-area: footer;
+  height: auto;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+footer p {
+  letter-spacing: 0.3rem;
+}
+
+@media (max-width: 375px) {
+  footer {
+    align-items: left;
+    flex-direction: column;
+    font-size: small;
+    font-weight: 200;
+    padding: 0.5rem 1rem;
+  }
+
+}
