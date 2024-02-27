@@ -25,34 +25,16 @@ function disabledButtons() {
 
 // função para criptografar o texto
 function crypt(text) {
-  const letters = text.split('');
+  const matriz = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
   const result = [];
 
-  for (let i = 0; i < letters.length; i++) {
-    let letter = letters[i];
-    switch (letter) {
-      case 'a':
-        letter = 'ai';
-        break;
-      case 'e':
-        letter = 'enter';
-        break;
-      case 'i':
-        letter = 'imes';
-        break;
-      case 'o':
-        letter = 'ober';
-        break;
-      case 'u':
-        letter = 'ufat';
-        break;
-      default:
-        break;
+  for (let i = 0; i < matriz.length; i++) {
+    if (text.includes(matriz[i][0])) {
+      text = text.replaceAll(matriz[i][0], matriz[i][1]);
     }
-    result.push(letter);
   }
 
-  return result.join('');
+  return text;
 }
 
 // função para descriptografar o texto
