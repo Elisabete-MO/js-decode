@@ -18,6 +18,15 @@
     </a>
 </p>
 
+<table align="center">
+    <tr>
+        <td>
+            <img src="./images/Badge-Converter.png" width="250px" alt="Badge de Conquista">
+        </td>
+    </tr>
+
+</table>
+
 <h3>🧑‍💻 Descrição do Projeto</h3>
 
 Essa aplicação que criptografa textos, assim será possível trocar mensagens secretas com outras pessoas que saibam o segredo da criptografia utilizada.
